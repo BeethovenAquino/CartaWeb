@@ -13,5 +13,24 @@ namespace Entidadades
         public int DestinatarioID { get; set; }
         public DateTime Fecha { get; set; }
         public string Nombre { get; set; }
+        public int CantCartas { get; set; }
+
+        public Destinatario(int destinatarioID, DateTime fecha, string nombre, int cantCartas)
+        {
+            DestinatarioID = destinatarioID;
+            Fecha = fecha;
+            Nombre = nombre;
+            CantCartas = cantCartas;
+        }
+
+        public Destinatario()
+        {
+            DestinatarioID = 0;
+            Fecha = DateTime.Now;
+            Nombre = string.Empty;
+            CantCartas = 0;
+        }
     }
+
+
 }

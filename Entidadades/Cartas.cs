@@ -14,13 +14,15 @@ namespace Entidadades
         public DateTime Fecha { get; set; }
         public int DestinarioID { get; set; }
         public string Cuerpo { get; set; }
+        public int CantidadCartas { get; set; }
 
-        public Cartas(int cartaID, DateTime fecha, int destinarioID, string cuerpo)
+        public Cartas(int cartaID, DateTime fecha, int destinarioID, string cuerpo, int cantidadCartas)
         {
             CartaID = cartaID;
             Fecha = fecha;
             DestinarioID = destinarioID;
             Cuerpo = cuerpo;
+            CantidadCartas = cantidadCartas;
         }
 
         public Cartas()
@@ -29,6 +31,7 @@ namespace Entidadades
             Fecha = DateTime.Now;
             DestinarioID = 0;
             Cuerpo = string.Empty;
+            CantidadCartas = 0;
         }
     }
 }
