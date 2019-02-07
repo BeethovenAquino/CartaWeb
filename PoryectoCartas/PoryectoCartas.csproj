@@ -79,6 +79,7 @@
     <Content Include="content\toastr.scss" />
     <Content Include="content\toastr.less" />
     <None Include="Scripts\jquery-1.6.3-vsdoc.js" />
+    <Content Include="Imagenes\Logo.jpg" />
     <Content Include="Scripts\jquery-1.6.3.js" />
     <Content Include="Scripts\jquery-1.6.3.min.js" />
     <Content Include="Scripts\toastr.js" />

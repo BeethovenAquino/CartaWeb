@@ -23,17 +23,17 @@
             background: #aaa;
         }
     </style>
-    <link rel="icon" type="image/png" href="imagenes/iconoSAG.png" />
+   <%-- <link rel="icon" type="image/png" href="imagenes/iconoSAG.png" />--%>
 </head>
 <body>
    <div style="background-color: ghostwhite; height: 270px;" class="jumbotron jumbotron-fluid">
             <div class="container"  >
             <div class="row" style="width: 853px;">
-            <asp:Image ID="Image1" runat="server" Height=" 230px" ImageUrl="~/imagenes/Logo SAG.png" Width="250px" />
+            <asp:Image ID="Image1" runat="server" Height=" 230px" ImageUrl="~/Imagenes/Logo.jpg" Width="250px" />
             <div class="container"  style="width: 602px;">              
-            <h1 style="text-align: center; " top: 0px; class="display-4">Soluciones Almonte Gil</h1>
+            <h1 style="text-align: center; " top: 0px; class="display-4">Soluciones Beethoven Aquino</h1>
 
-            <p style="text-align: center; " top: 0px; class="lead">Control Bancario</p>
+            
 
             </div>
                 </div>
@@ -56,8 +56,8 @@
                             Registros
                           </button>
                           <div class="dropdown-menu">
-                            <a class="dropdown-item" runat="server" href="~/UI/Registros/Cuenta.aspx">Resgitro Cartas</a>
-                            <a class="dropdown-item" runat="server" href="~/UI/Registros/Depositos.aspx">Registro Destinatarios</a>
+                            <a class="dropdown-item" runat="server" href="~/UI/Registros/Cartas.aspx">Resgitro Cartas</a>
+                            <a class="dropdown-item" runat="server" href="~/UI/Registros/Destinatarios.aspx">Registro Destinatarios</a>
                             
                           </div>
                         </div>
