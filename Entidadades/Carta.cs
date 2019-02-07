@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Entidadades
 {
-    public class Cartas
+    public class Carta
     {
         [Key]
         public int CartaID { get; set; }
@@ -16,7 +16,7 @@ namespace Entidadades
         public string Cuerpo { get; set; }
         public int CantidadCartas { get; set; }
 
-        public Cartas(int cartaID, DateTime fecha, int destinarioID, string cuerpo, int cantidadCartas)
+        public Carta(int cartaID, DateTime fecha, int destinarioID, string cuerpo, int cantidadCartas)
         {
             CartaID = cartaID;
             Fecha = fecha;
@@ -25,7 +25,7 @@ namespace Entidadades
             CantidadCartas = cantidadCartas;
         }
 
-        public Cartas()
+        public Carta()
         {
             CartaID = 0;
             Fecha = DateTime.Now;

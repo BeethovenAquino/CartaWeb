@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cartas.cs" />
+    <Compile Include="Carta.cs" />
     <Compile Include="Destinatario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace BLL
 {
-   public class CartasBLL : RepositorioBase<Cartas>
+   public class CartasBLL : RepositorioBase<Carta>
     {
-        public bool Guardar(Cartas entity)
+        public bool Guardar(Carta entity)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
@@ -45,7 +45,7 @@ namespace BLL
 
             try
             {
-                Cartas depositos = contexto.cartas.Find(id);
+                Carta depositos = contexto.cartas.Find(id);
 
                 if (depositos != null)
                 {
@@ -74,11 +74,11 @@ namespace BLL
         }
 
 
-        public override bool Modificar(Cartas entity)
+        public override bool Modificar(Carta entity)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
-            RepositorioBase<Cartas> repositorio = new RepositorioBase<Cartas>();
+            RepositorioBase<Carta> repositorio = new RepositorioBase<Carta>();
             try
             {
 
