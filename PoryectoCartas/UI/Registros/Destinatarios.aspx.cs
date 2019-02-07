@@ -13,6 +13,7 @@ namespace PoryectoCartas.UI.Registros
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             FechadateTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
             CantCartasTexbox.Text = "0";
             DestinatarioIDTextbox.Text = "0";
@@ -51,9 +52,10 @@ namespace PoryectoCartas.UI.Registros
 
         private void Limpiar()
         {
+            
             DestinatarioIDTextbox.Text = "";
             NombreTextbox.Text = "";
-            CantCartasTexbox.Text = "";
+            CantCartasTexbox.Text = "0";
 
         }
 

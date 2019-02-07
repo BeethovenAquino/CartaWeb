@@ -11,9 +11,13 @@ namespace PoryectoCartas.UI.Registros
 {
     public partial class Cartas : System.Web.UI.Page
     {
+        string condicion = "Select One";
+        RepositorioBase<Carta> repositorio = new RepositorioBase<Carta>();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LlenaComboDestinatario();
+            CartaIDTextbox.Text = "0";
+            FechadateTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
         }
 
         public Carta LlenaClase()
@@ -42,7 +46,7 @@ namespace PoryectoCartas.UI.Registros
         private void LlenaCampos(Carta carta)
         {
             CartaIDTextbox.Text = carta.CartaID.ToString();
-            LlenaComboCuentaID();
+            LlenaComboDestinatario();
             CuerpoTextbox.Text = carta.Cuerpo;
             CantCartasTexbox.Text = carta.CantidadCartas.ToString();
 
@@ -50,19 +54,19 @@ namespace PoryectoCartas.UI.Registros
         private void Limpiar()
         {
             CartaIDTextbox.Text = "";
-            LlenaComboCuentaID();
+            LlenaComboDestinatario();
             CuerpoTextbox.Text = "";
-            CantCartasTexbox.Text = "";
+            CantCartasTexbox.Text = "0";
             FechadateTime.Text = DateTime.Now.ToString("yyyy-MM-dd");
 
         }
         
-        private void LlenaComboCuentaID()
+        private void LlenaComboDestinatario()
         {
-            RepositorioBase<Carta> cuentas = new RepositorioBase<Carta>();
+            RepositorioBase<Destinatario> destinatario = new RepositorioBase<Destinatario>();
             DropDownList.Items.Clear();
-            DropDownList.DataSource = cuentas.GetList(x => true);
-            DropDownList.DataValueField = "CartaID";
+            DropDownList.DataSource = destinatario.GetList(x => true);
+            DropDownList.DataValueField = "DestinatarioID";
             DropDownList.DataTextField = "Nombre";
             DropDownList.DataBind();
         }
@@ -74,12 +78,15 @@ namespace PoryectoCartas.UI.Registros
 
         protected void GuardarButton_Click(object sender, EventArgs e)
         {
+            if (DropDownList.SelectedValue == condicion)
+                return;
+
 
             CartasBLL repositorio = new CartasBLL();
             Carta carta = LlenaClase();
-            RepositorioBase<Carta> cuentas = new RepositorioBase<Carta>();
+            RepositorioBase<Destinatario> destinatario = new RepositorioBase<Destinatario>();
 
-            var validar = cuentas.Buscar(Utilities.Utils.ToInt(DropDownList.SelectedValue));
+            var validar = destinatario.Buscar(Utilities.Utils.ToInt(DropDownList.SelectedValue));
 
             bool paso = false;
 

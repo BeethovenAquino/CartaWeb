@@ -9,7 +9,7 @@
                 <div class="Container-fluid">
                     <div class="align-content-center">
                         <div class="panel-heading text-center">
-                            <h1><ins>Carta</ins></h1>
+                            <h1><ins>Destinatarios</ins></h1>
                             <br />
                         </div>
 
